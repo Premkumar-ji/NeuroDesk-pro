@@ -50,7 +50,7 @@
 |-------|-------|
 | **Name** | `smartai-todo-server` |
 | **Root Directory** | `server` |
-| **Build Command** | `npm run build` |
+| **Build Command** | `npm install` |
 | **Start Command** | `npm start` |
 
 ### Environment Variables:
