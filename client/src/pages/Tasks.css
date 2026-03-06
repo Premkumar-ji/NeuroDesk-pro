@@ -1,0 +1,207 @@
+/* Tasks Page Styles */
+
+.tasks-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.page-title h1 {
+  font-size: 1.75rem;
+}
+
+.task-count {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.view-btn {
+  padding: 8px 12px;
+  color: var(--text-tertiary);
+  transition: var(--transition);
+}
+
+.view-btn:hover {
+  color: var(--text-primary);
+}
+
+.view-btn.active {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+/* Export Dropdown */
+.export-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  min-width: 160px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.dropdown-menu button:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Filters Panel */
+.filters-panel {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.filter-group .select {
+  min-width: 160px;
+}
+
+/* Categories Section */
+.categories-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-chip {
+  padding: 6px 14px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.category-chip:hover {
+  opacity: 0.8;
+}
+
+.category-chip.active {
+  box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px currentColor;
+}
+
+/* Tasks Container */
+.tasks-container {
+  min-height: 400px;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tasks-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .page-actions {
+    flex-wrap: wrap;
+  }
+  
+  .filters-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group .select {
+    width: 100%;
+  }
+  
+  .tasks-list.grid {
+    grid-template-columns: 1fr;
+  }
+}
+
