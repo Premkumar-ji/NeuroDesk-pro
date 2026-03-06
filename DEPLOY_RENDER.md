@@ -42,6 +42,8 @@
 
 ## Phase 3: Deploy Backend (Web Service)
 
+### IMPORTANT: Deploy as "Web Service" NOT "Static Site"
+
 ### Render Dashboard Settings:
 
 | Field | Value |
