@@ -9,6 +9,7 @@ server/node_modules/
 .env.local
 .env.*.local
 *.env
+*.md
 
 # Build outputs
 dist/
